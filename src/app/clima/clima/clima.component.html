@@ -1,8 +1,14 @@
-<div>
+<div id="clima">
   <app-localizacao></app-localizacao>
-  <div>
+  <div class="row">
     <app-imagem></app-imagem>
-    <app-especificacoes></app-especificacoes>
+    <div class="d-flex align-items-center">
+      <div id="temperatura">
+        <app-temperatura></app-temperatura>
+      </div>
+    </div>
+    <div id="especificacoes" class="col float-right">
+      <app-especificacoes></app-especificacoes>
+    </div>
   </div>
-
 </div>

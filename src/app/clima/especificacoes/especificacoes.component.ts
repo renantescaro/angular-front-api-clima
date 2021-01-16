@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EspecificacoesComponent implements OnInit {
 
+  chuva = 52
+  umidade = 84
+  vento = 10
+
   constructor() { }
 
   ngOnInit() {
