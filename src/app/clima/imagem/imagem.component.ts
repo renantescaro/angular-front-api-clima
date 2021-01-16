@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-imagem',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImagemComponent implements OnInit {
 
-  urlImagem = 'https://www.weatherbit.io/static/img/icons/t01d.png';
+  @Input() urlImagem;
 
   constructor() { }
 

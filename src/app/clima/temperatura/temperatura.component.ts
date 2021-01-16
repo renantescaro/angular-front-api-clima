@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-temperatura',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemperaturaComponent implements OnInit {
 
-  temperatura = 24;
+  @Input() temperatura;
 
   constructor() { }
 
