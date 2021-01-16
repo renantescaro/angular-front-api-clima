@@ -5,9 +5,11 @@ import { ImagemComponent } from './imagem/imagem.component';
 import { TemperaturaComponent } from './temperatura/temperatura.component';
 import { EspecificacoesComponent } from './especificacoes/especificacoes.component';
 import { ClimaComponent } from './clima/clima.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
+    HttpClientModule,
     CommonModule,
   ],
   declarations: [

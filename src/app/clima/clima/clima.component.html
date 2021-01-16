@@ -1,17 +1,21 @@
 <div id="clima">
-  <app-localizacao [endereco]="endereco" [data]="data"></app-localizacao>
+  <app-localizacao 
+    [endereco]="clima.endereco"
+    [data]="clima.data" 
+  >
+  </app-localizacao>
   <div class="row">
-    <app-imagem [urlImagem]="urlImagem"></app-imagem>
+    <app-imagem [urlImagem]="clima.urlImagem"></app-imagem>
     <div class="d-flex align-items-center">
       <div id="temperatura">
-        <app-temperatura [temperatura]="temperatura"></app-temperatura>
+        <app-temperatura [temperatura]="clima.temperatura"></app-temperatura>
       </div>
     </div>
     <div id="especificacoes" class="col float-right">
       <app-especificacoes
-        [chuva]="chuva"
-        [umidade]="umidade"
-        [vento]="vento"
+        [chuva]="clima.chuva"
+        [umidade]="clima.umidade"
+        [vento]="clima.vento"
       >
       </app-especificacoes>
     </div>

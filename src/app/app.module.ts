@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ClimaModule } from './clima/clima.module';
-import { ClimaComponent } from './clima/clima/clima.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +11,7 @@ import { ClimaComponent } from './clima/clima/clima.component';
   imports: [
     BrowserModule,
     ClimaModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ClimaService } from '../clima/clima.service';
 
 @Component({
   selector: 'app-clima',
@@ -6,18 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clima.component.css']
 })
 export class ClimaComponent implements OnInit {
+  clima: any;
 
-  endereco    = 'Avenida Marechal Rondon - Vila Sao Joaquim, Penápolis - SP, 16305-076';
-  data        = 'sexta-feira, 20:00';
-  urlImagem   = 'https://www.weatherbit.io/static/img/icons/t01d.png';
-  temperatura = 26;
-  chuva       = 52;
-  umidade     = 84;
-  vento       = 10;
+  // urlImagem   = 'https://www.weatherbit.io/static/img/icons/t01d.png';
 
-  constructor() { }
+  constructor(
+    private climaService: ClimaService,
+    private activatedRoute: ActivatedRoute
+  ){}
 
   ngOnInit() {
+    // verificar a rota?
+
+    // const nomeCidade = this.activatedRoute.snapshot.params.cidade;
+
+    this.climaService
+       .porCidade('lins')
+       .subscribe(clima => this.clima = clima);
   }
 
 }
