@@ -21,10 +21,14 @@ export class ClimaComponent implements OnInit {
     // verificar a rota?
 
     // const nomeCidade = this.activatedRoute.snapshot.params.cidade;
+    // console.log(nomeCidade)
 
     this.climaService
        .porCidade('lins')
-       .subscribe(clima => this.clima = clima);
+       .subscribe(clima => {
+         this.clima = clima;
+         this.clima.urlImagem = this.climaService.url + clima.urlImagem;
+        });
   }
 
 }
