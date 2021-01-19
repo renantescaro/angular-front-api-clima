@@ -24,7 +24,9 @@ export class ClimaComponent implements OnInit {
 
     this.climaService
        .porCidade('lins')
-       .subscribe(clima => this.clima = clima);
+       .subscribe(clima => {
+         this.clima = clima
+        });
   }
 
 }

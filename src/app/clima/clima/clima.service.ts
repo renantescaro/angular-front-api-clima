@@ -6,7 +6,7 @@ import { Clima } from "./clima";
     providedIn: 'root'
 })
 export class ClimaService{
-    private url = 'http://localhost:5000/';
+    private url = 'http://192.168.0.5:5000/';
     constructor(private http: HttpClient){}
 
     porLatitudeLongitude(latitube: number, longitude: number){
