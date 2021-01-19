@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "angular-front-api-clima"
+  "defaultProject": "angular-front-api-clima",
+  "cli": {
+    "analytics": "0cd4d0c6-612c-4a7f-a7b5-7faf95509d7e"
+  }
 }
