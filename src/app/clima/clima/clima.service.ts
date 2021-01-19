@@ -6,11 +6,11 @@ import { Clima } from "./clima";
     providedIn: 'root'
 })
 export class ClimaService{
-    url : string = 'http://192.168.0.5:5000/';
+    url : string = 'http://192.168.0.199:5000/';
     constructor(private http: HttpClient){}
 
     porLatitudeLongitude(latitube: number, longitude: number){
-        return this.http.get<Clima>(this.url+latitube.toString()+'/'+longitude.toString());
+        return this.http.get<Clima>(this.url+'posicao/'+latitube.toString()+'/'+longitude.toString());
     }
 
     porCidade(cidade: string){
