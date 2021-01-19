@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EspecificacoesComponent implements OnInit {
 
-  @Input() chuva;
+  @Input() clima;
   @Input() umidade;
   @Input() vento;
 
