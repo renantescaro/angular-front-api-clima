@@ -1,0 +1,14 @@
+
+#dvPergunta{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#dvBotoes{
+    margin-top: 20px;
+}
+
+#dvNomeCidade{
+    margin-top: 20px;
+    display: none;
+}

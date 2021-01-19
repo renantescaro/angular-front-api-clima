@@ -1,0 +1,25 @@
+<div id="dvPegarLocalizacao">
+    <div id="dvPergunta" >
+        <h2 id="titulo">Como deseja consultar o clima?</h2>
+    </div>
+    <div class="container">
+        <div id="dvBotoes" class="row justify-content-md-center">
+            <div class="col col-lg-3">
+                <button (click)="porLocalizacao()" class="btn btn-primary">Por Localização</button>
+            </div>
+            <div class="col col-lg-3">
+                <button (click)="porNomeCidade()" class="btn btn-primary">Nome da Cidade</button>
+            </div>
+        </div>
+        <div id="dvNomeCidade">
+            <div class="row justify-content-md-center">
+                <div class="col-6">
+                    <input type="text" class="form-control" name="txtNomeCidade" id="txtNomeCidade">
+                </div>
+                <div class="col-1">
+                    <button (click)="confirmarNomeCidade()" class="btn btn-primary">Pesquisar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
