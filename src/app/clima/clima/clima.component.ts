@@ -10,25 +10,36 @@ import { ClimaService } from '../clima/clima.service';
 export class ClimaComponent implements OnInit {
   clima: any;
 
-  // urlImagem   = 'https://www.weatherbit.io/static/img/icons/t01d.png';
-
   constructor(
     private climaService: ClimaService,
     private activatedRoute: ActivatedRoute
   ){}
 
   ngOnInit() {
-    // verificar a rota?
+    // Se não receber cidade, buscar por localização
+    const nomeCidade = this.activatedRoute.snapshot.params.nomeCidade;
+    if(!nomeCidade){
+      const latitude  = this.activatedRoute.snapshot.params.latitude;
+      const longitude = this.activatedRoute.snapshot.params.longitude;
 
-    // const nomeCidade = this.activatedRoute.snapshot.params.cidade;
-    // console.log(nomeCidade)
+      this.climaService
+        .porLatitudeLongitude(latitude, longitude)
+        .subscribe(clima => {
+          this.setarClima(clima);
+        });
+      return;
+    }
 
     this.climaService
-       .porCidade('lins')
-       .subscribe(clima => {
-         this.clima = clima;
-         this.clima.urlImagem = this.climaService.url + clima.urlImagem;
-        });
+    .porCidade(nomeCidade)
+    .subscribe(clima => {
+      this.setarClima(clima);
+    });
+    return;
   }
 
+  setarClima(clima){
+    this.clima = clima;
+    this.clima.urlImagem = this.climaService.url + clima.urlImagem;
+  }
 }
