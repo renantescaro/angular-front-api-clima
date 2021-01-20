@@ -7,3 +7,7 @@
 
 ### se der erro:
 * npm install rxjs@6.0.0 --save
+
+
+### ip api, padrão localhost:5000:
+* src/app/clima/clima/clima.service.ts
