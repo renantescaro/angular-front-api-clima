@@ -12,7 +12,7 @@ const rotas: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(rotas)],
+    imports: [RouterModule.forRoot(rotas, { relativeLinkResolution: 'legacy' })],
     exports: [RouterModule]
 })
 export class AppRoutingModule{
