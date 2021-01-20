@@ -14,7 +14,7 @@
         <div id="dvNomeCidade">
             <div class="row justify-content-md-center">
                 <div class="col-6">
-                    <input type="text" class="form-control" name="txtNomeCidade" id="txtNomeCidade">
+                    <input (input)="txtNomeCidade=$event.target.value" type="text" class="form-control">
                 </div>
                 <div class="col-1">
                     <button (click)="confirmarNomeCidade()" class="btn btn-primary">Pesquisar</button>

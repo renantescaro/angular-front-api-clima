@@ -8,6 +8,8 @@ import { ClimaService } from '../clima/clima/clima.service';
 })
 export class PegarLocalizacaoComponent implements OnInit {
 
+  txtNomeCidade: string
+
   constructor() { }
 
   ngOnInit(): void {
@@ -36,7 +38,7 @@ export class PegarLocalizacaoComponent implements OnInit {
   }
 
   confirmarNomeCidade(){
-    const nomeCidade = document.getElementById('txtNomeCidade').value;
+    const nomeCidade = this.txtNomeCidade;
 
     if(!nomeCidade){
       alert('Digite o nome da cidade!');
